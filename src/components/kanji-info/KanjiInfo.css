@@ -1,0 +1,19 @@
+#kanji-info .card {
+    width: 100%;
+}
+
+#kanji-info .card-title {
+    font-size: 75px;
+    text-align: center;
+}
+
+#kanji-info .card-subtitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+#kanji-info .card-text {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
