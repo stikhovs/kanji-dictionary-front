@@ -15,7 +15,7 @@ export default function SearchForm({ onKanjiFound }) {
     function search() {
         if (kanjiToSearch.trim() != '' && kanjiToSearch.trim().length == 1) {
             console.log('kanjiToSearch ' + kanjiToSearch);
-            fetch('http://localhost:8080/kanji?kanjiSymbol=' + kanjiToSearch)
+            fetch('https://sergio-kanji-dictionary.herokuapp.com/kanji?kanjiSymbol=' + kanjiToSearch)
                 .then(response => response.json())
                 .then(foundKanji => onKanjiFound(foundKanji));
         }

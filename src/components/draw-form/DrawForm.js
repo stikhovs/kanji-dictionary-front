@@ -46,7 +46,7 @@ export default function DrawForm({ onPredictionsChange }) {
             return;
         }
 
-        fetch('http://localhost:8080/recognize?size=20', {
+        fetch('https://sergio-kanji-dictionary.herokuapp.com/recognize?size=20', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'

@@ -19,7 +19,7 @@ export default function PredictionList({ predictions, onKanjiFound }) {
     function handlePredictionClick(pred) {
         console.log(pred);
 
-        fetch('http://localhost:8080/kanji?kanjiSymbol=' + pred.className)
+        fetch('https://sergio-kanji-dictionary.herokuapp.com/kanji?kanjiSymbol=' + pred.className)
         .then(response => response.json() )
         .then(foundKanji => onKanjiFound(foundKanji));
     }
