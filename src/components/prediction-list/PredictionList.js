@@ -3,6 +3,7 @@ import Prediction from '../prediction/Prediction';
 
 
 export default function PredictionList({ predictions, onKanjiFound }) {
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
     return (
         <div id='prediction-list'>
             {predictions.map((pred) =>
@@ -19,7 +20,7 @@ export default function PredictionList({ predictions, onKanjiFound }) {
     function handlePredictionClick(pred) {
         console.log(pred);
 
-        fetch('https://sergio-kanji-dictionary.herokuapp.com/kanji?kanjiSymbol=' + pred.className)
+        fetch(`${BACKEND_URL}/kanji?kanjiSymbol=${pred.className}`)
         .then(response => response.json() )
         .then(foundKanji => onKanjiFound(foundKanji));
     }

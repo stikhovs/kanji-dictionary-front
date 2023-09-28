@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 
 export default function SearchForm({ onKanjiFound }) {
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
     const [kanjiToSearch, setKanjiToSearch] = useState('');
 
@@ -13,9 +14,9 @@ export default function SearchForm({ onKanjiFound }) {
     );
 
     function search() {
-        if (kanjiToSearch.trim() != '' && kanjiToSearch.trim().length == 1) {
+        if (kanjiToSearch.trim() !== '' && kanjiToSearch.trim().length === 1) {
             console.log('kanjiToSearch ' + kanjiToSearch);
-            fetch('https://sergio-kanji-dictionary.herokuapp.com/kanji?kanjiSymbol=' + kanjiToSearch)
+            fetch(`${BACKEND_URL}/kanji?kanjiSymbol=${kanjiToSearch}`)
                 .then(response => response.json())
                 .then(foundKanji => onKanjiFound(foundKanji));
         }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './KanjiInfo.css';
 
 export default function KanjiInfo({ kanji }) {
 
-    const isKanjiPresent = kanji != '';
+    const isKanjiPresent = kanji !== '';
 
     return (
         <div id='kanji-info' className='d-flex justify-content-center'>
@@ -24,14 +24,14 @@ export default function KanjiInfo({ kanji }) {
     );
 
     function getOnYomi(kanji) {
-        if (kanji.onYomiEng.trim() != '-') {
+        if (kanji.onYomiEng.trim() !== '-') {
             return  <p className="card-text"><b>{kanji.onYomiEng}</b> - {kanji.onYomiTranslationRus}</p>
         }
         return <></>
     }
 
     function getKunYomi(kanji) {
-        if (kanji.kunYomiEng.trim() != '-') {
+        if (kanji.kunYomiEng.trim() !== '-') {
             return  <p className="card-text"><b>{kanji.kunYomiEng}</b> - {kanji.kunYomiTranslationRus}</p>
         }
         return <></>

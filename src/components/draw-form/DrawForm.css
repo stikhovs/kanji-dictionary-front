@@ -1,6 +1,7 @@
 .kanjiDraw {
-    border: 1px solid #cdcbcb;
+    border: 1px solid #cdcbcb !important;
     box-shadow: 1px 0px 10px #cbc5c5;
+    border-radius: 0px !important;
 }
 
 /* #kanji-list-block {

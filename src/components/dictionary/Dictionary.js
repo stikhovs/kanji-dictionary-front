@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import SearchForm from '../search-form/SearchForm';
 import DrawForm from '../draw-form/DrawForm';
 import PredictionList from '../prediction-list/PredictionList';
